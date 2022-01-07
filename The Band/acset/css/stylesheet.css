@@ -1,0 +1,264 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family:Arial, Helvetica, sans-serif;
+}
+.cursor-poiter {
+    cursor: pointer;
+}
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.text-white {
+    color: white !important;
+}
+.text-align-none{
+    text-align:left !important;
+}
+.input-box {
+    padding: 8px;
+    display: block;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.half-col {
+    float: left;
+    width: 49.99%;
+    padding: 0 8px;
+
+}
+.float-right {
+    float: right !important;
+}
+.section-body {
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+}
+
+/* ----------------------Header-------------- */
+#header{
+    
+    position: fixed;
+    right: 0;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 46px;
+    background-color: black;
+}
+#nav>li{
+    display: inline-block;
+    position: relative;
+}
+.search-box{
+    text-decoration: none;
+    color: #fff;
+    line-height: 46px;
+    padding: 0px 24px;
+    display: inline-block;
+    float: right;
+    top: 0;
+    font-size: 20px;
+    
+}
+#header .search-box:hover{
+    color: white;
+    background-color: tomato;
+}
+.subnav>li>a,
+#nav>li>a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 46px;
+    padding: 0px 24px;
+    display: inline-block;
+}
+#nav li:hover>ul{
+    display:block;
+
+}
+#nav>li>a {
+    text-transform: uppercase;
+}
+#nav>li:hover>a{
+    background-color: #ccc;
+    color: black;
+}
+#nav .subnav{
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+#nav .subnav li:hover {
+    background-color: #ccc;
+    color: black;
+}
+#nav .subnav li a{
+    color: black;
+}
+#nav .subnav>li {
+    display: block;
+}
+
+
+
+/* ---------------------SLIder------------------------ */
+#slider {
+    margin-top: 46px;
+}
+#slider .chicago-content {
+    position: absolute;
+    left: 50%;
+     transform: translate(-50%,0);
+    bottom: 0;
+    color: white;
+    text-align: center;
+}
+#slider .content {
+    margin: 10px 0;
+    font-family:'Segoe UI',Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+#slider .sub-content {
+    margin: 15px 0;
+}
+
+/* -----------------------------------Content-------------------------- */
+
+.content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+#content .section-heading {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 400;
+
+}
+.section-sub-heading{
+    margin: 15px 0;
+    text-align: center;
+    opacity: 0.5;
+    font-style: italic;
+    font-size: 15px;
+
+}
+#content .aubout-text {
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.5;
+}
+#content .all-team {
+    padding: 32px 0;
+
+}
+#content .team-member {
+    float: left;
+    width: calc(100%/3);
+    text-align: center;
+}
+#content .name-member {
+    margin: 15px 0;
+}
+#content .team-img {
+    width: 60%;
+    border-radius: 10%;
+}
+/* Tour  */
+.tour-section {
+    background-color: #000;
+
+}
+.tour-section .ticket-row {
+    background-color: white;
+   padding: 8px 16px;
+    border-bottom:1px solid #ddd;
+}
+.ticket-row {
+    list-style-type: none;
+    color: #757575;
+}
+.sold-out {
+    margin-left: 16px;
+    padding: 0px 8px;
+    background-color: tomato !important;
+    color: white !important;
+}
+.three-ticket {
+    float: right;
+    margin-right: 16px;
+    background-color: #000;
+    color: white;
+    padding: 2px 8px;
+    text-align: center;
+    border-radius: 48%;
+
+}
+#tour .ticket-place-list {
+    margin: 0 -16px;
+    padding: 32px 8px;
+    
+}
+#tour .ticket-place {
+    background-color: #fff;
+    width: calc(100%/3);
+    float: left;
+    margin: 0 0 16px;
+    padding: 0 8px;
+    background-clip:content-box;
+}
+#tour .place-name-ticket {
+    margin: 15px 0;
+   
+}
+#tour .content-ticket-buy {
+    padding: 0 16px;
+}
+.buy-ticket-button {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    background-color: black;
+    color: white;
+    border-style: none;
+    font-size: 15px;
+}
+/* -Contact */
+#contact .contact-content {
+    padding: 32px 0;
+
+}
+#contact .contact-icon {
+    float: left;
+    width: 49.99%;
+    font-size: 18px;
+    margin-bottom: 16px;
+
+}
+#contact .contact-write-form {
+    float: left;
+    width: 49.99%;
+    margin: 0 -16px;
+}
+.icon-hover:hover {
+    opacity: 0.6;
+
+}
+
+/* ----------------------------Footet---------------------- */
+#footer{
+    padding: 64px 16px;
+    font-size: 32px;
+    text-align: center;
+
+}
