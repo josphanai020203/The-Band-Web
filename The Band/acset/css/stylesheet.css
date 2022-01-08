@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 html {
+    scroll-behavior:smooth;
     font-family:Arial, Helvetica, sans-serif;
 }
 .cursor-poiter {
@@ -40,6 +41,9 @@ html {
     margin-top: 32px !important;
     margin-bottom: 32px !important;
 }
+.pc-hine{
+    display: none !important;
+}
 
 /* ----------------------Header-------------- */
 #header{
@@ -51,18 +55,25 @@ html {
     width: 100%;
     height: 46px;
     background-color: black;
+    z-index: 1;
+    overflow: hidden;
 }
 #nav>li{
     display: inline-block;
     position: relative;
 }
+.icon-box,
 .search-box{
-    text-decoration: none;
-    color: #fff;
     line-height: 46px;
     padding: 0px 24px;
-    display: inline-block;
     float: right;
+    
+}
+.mobile-menu,
+.search-icon {
+    text-decoration: none;
+    color: #fff;
+    display:inline-block;
     top: 0;
     font-size: 20px;
     
@@ -113,13 +124,17 @@ html {
 #slider {
     margin-top: 46px;
 }
+.chicago-img {
+    position: relative;
+}
 #slider .chicago-content {
     position: absolute;
     left: 50%;
-     transform: translate(-50%,0);
+     transform: translate(-50%,0%);
     bottom: 0;
     color: white;
     text-align: center;
+    padding-bottom: 32px;
 }
 #slider .content {
     margin: 10px 0;
@@ -135,6 +150,7 @@ html {
 
 .content-section {
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 16px;

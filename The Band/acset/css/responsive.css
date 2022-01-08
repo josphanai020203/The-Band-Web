@@ -1,0 +1,33 @@
+/* PC */
+@media (min-width:1024px) {
+
+    
+}
+/* Tablet */
+@media (min-width:740px) and (max-width :1023px) {
+
+    
+}
+/* Mobile */
+@media (max-width:723px) {
+    #nav>li {
+        display: block;
+    }
+    .chicago-content{
+        display: none;
+    }
+    .search-box {
+        display: none;
+    }
+    .icon-box {
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+    #header .icon-box:hover {
+        background-color: #ccc;
+    }
+    #header .icon-box:hover .mobile-menu {
+        color: black;
+    }
+}
