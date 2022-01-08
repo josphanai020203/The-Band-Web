@@ -1,19 +1,33 @@
 /* PC */
-@media (min-width:1024px) {
+
+/* Tablet */
+@media (min-width:46.25em){
     .icon-box {
         display: none;
     }
+    #nav .more-btn:hover ul{
+        display:block;
     
-}
-/* Tablet */
-@media (min-width:740px) and (max-width :1023px) {
-
-    
+    }
 }
 /* Mobile */
-@media (max-width:723px) {
+@media (max-width:46.1875em) {
+    #header {
+        overflow: hidden;
+    }
     #nav>li {
         display: block;
+    }
+    #nav>li>a {
+        display: block;
+    }
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav li a {
+        color: white !important;
+        padding: 0 40px;
     }
     .chicago-content{
         display: none;
@@ -32,4 +46,15 @@
     #header .icon-box:hover .mobile-menu {
         color: black;
     }
+    #header .home-btn {
+        display: inline-block !important;
+    }
+    #contact .contact-icon,#contact .contact-write-form,#tour .ticket-place,.half-col,
+    #content .team-member {
+        width: 100%;
+    }
+    #contact .contact-write-form {
+        margin: 0px;
+    }
+
 }

@@ -14,19 +14,19 @@
         <div id="header">
         <!-- Begin navigation -->
            <ul class="cursor-poiter" id="nav">
-               <li><a href="#slider">HOME</a></li>
+               <li class="home-btn"><a href="#slider">HOME</a></li>
                <li><a href="#about">Band</a></li>
                <li><a href="#tour">Tour</a></li>
                <li><a href="#contact">Contact</a></li>
-               <li >
+               <li class="more-btn">
                    <a href="#" >More
                        <i class="ti-arrow-circle-down"></i>
                    </a>
                    
                    <ul class="subnav">
-                       <li><a href="">Merchandise</a></li>
-                       <li><a href="">Extras</a></li>
-                       <li><a href="">Media</a></li>
+                       <li><a href="#">Merchandise</a></li>
+                       <li><a href="#">Extras</a></li>
+                       <li><a href="#">Media</a></li>
                    </ul>
                 </li>
                 <div class="search-box">
@@ -42,7 +42,7 @@
         <div class="" id="slider" >
             <div class="chicago-img">
                 <div>
-                    <img width="100%" src="/acset/img/chicago.jpg" alt="">
+                    <img width="100%" src="./acset/img/chicago.jpg" alt="">
                 </div>
                 <div class="chicago-content">
                     <h3 class="content">Chicago</h3>
@@ -60,15 +60,15 @@
 
                     <div class="team-member">
                         <p class="name-member">Name</p>
-                        <img class="team-img" src="/acset/img/bandmember.JPG" alt="">
+                        <img class="team-img" src="./acset/img/bandmember.JPG" alt="">
                     </div>
                     <div class="team-member">
                         <p class="name-member">Name</p>
-                        <img class="team-img" src="/acset/img/bandmember.JPG" alt="">
+                        <img class="team-img" src="./acset/img/bandmember.JPG" alt="">
                     </div>
                     <div class="team-member">
                         <p class="name-member">Name</p>
-                        <img class="team-img" src="/acset/img/bandmember.JPG" alt="">
+                        <img class="team-img" src="./acset/img/bandmember.JPG" alt="">
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                     </ul>
                     <div class="ticket-place-list clear">
                         <div class="ticket-place">
-                            <img width="100%" src="/acset/img/newyork.jpg" alt="">
+                            <img width="100%" src="./acset/img/newyork.jpg" alt="">
                             <div class="content-ticket-buy">
 
                                 <p class="place-name-ticket"><b>New York</b></p>
@@ -97,7 +97,7 @@
 
                         </div>
                         <div class="ticket-place">
-                            <img width="100%" src="/acset/img/paris.jpg" alt="">
+                            <img width="100%" src="./acset/img/paris.jpg" alt="">
                             <div class="content-ticket-buy">
                                 
                                 <p class="place-name-ticket"><b>Paris</b></p>
@@ -108,7 +108,7 @@
                             
                         </div>
                         <div class="ticket-place">
-                            <img width="100%" src="/acset/img/sanfran.jpg" alt="">
+                            <img width="100%" src="./acset/img/sanfran.jpg" alt="">
                             <div class="content-ticket-buy">
                                 
                                 <p class="place-name-ticket"><b>San Francisco</b></p>
@@ -160,7 +160,7 @@
 
             </div>
             <div id="map">
-                <img width="100%" src="/acset/img/map.jpg" alt="">
+                <img width="100%" src="./acset/img/map.jpg" alt="">
 
             </div>
 
@@ -197,7 +197,13 @@
         for (var i = 0;i < menuItems.length;i++ ){
             var menuItem = menuItems[i];
             menuItem.onclick = function () {
+                var ParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (!ParentMenu) {
                 headerElement.style.height = null;
+                    
+                } else {
+                    event.preventDefault();
+                }
 
                 
             }
