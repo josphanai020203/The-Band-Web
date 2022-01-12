@@ -281,3 +281,106 @@ html {
     text-align: center;
 
 }
+#buyTicketForm {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    box-shadow:black;
+
+}
+#buyTicketForm .buyTicketForm__hearder {
+    background-color: #009688;
+    max-width: 700px;
+    margin: auto;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+
+}
+    
+#buyTicketForm .buyTicketForm__hearder--content {
+    display: inline-block;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 4px;
+
+
+}
+#buyTicketForm .buyTicketForm__hearder--span {
+    right: 0;
+    top: 0;
+    position: absolute;
+    padding: 16px 32px 16px 16px;
+    cursor: pointer;
+}
+#buyTicketForm .buyTicketForm__hearder--span:hover {
+    background-color: #ddd;
+}
+#buyTicketForm .buyTicketForm__hearder--icon{
+    font-size: 60px;
+    
+}
+#buyTicketForm .buyTicketForm__contentbox{
+    max-width: 700px;
+    margin: auto;
+    padding:  32px 16px ;
+    position: relative;
+    background-color: #fff;
+
+}
+
+.buyTicketForm__des {
+  font-size:large;
+  
+}
+.buyTicketForm__input {
+    width: 100%;
+    padding: 8px 0;
+    margin: 10px 0;
+}
+.buyTicketForm__btn {
+    width: 100%;
+    font-size: 16px;
+    background-color: #009688;
+    border-style: none;
+    padding: 12px 0;
+    color: #fff;
+
+}
+.buyTicketForm__contentbox--close{
+    background-color: red;
+    border-style: none;
+    color: white;
+    padding: 8px 16px;
+    margin-top: 32px;
+    display: inline-block;
+}
+.buyTicketForm__contentbox--help{
+    position: absolute;
+
+    right: 0;
+    bottom: 40px;
+    margin-right: 16px;
+    
+}
+.animation {
+    position:relative;
+    animation: animatetop 0.4s ease-in;
+}
+@keyframes animatetop{
+    from {
+        top:-300px;opacity:0
+    }
+    to
+    {
+        top:0;opacity:1
+    }
+}

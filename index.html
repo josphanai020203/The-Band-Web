@@ -39,7 +39,7 @@
            </ul>
         <!-- End navigation -->
     </div>
-        <div class="" id="slider" >
+        <div class="mySlides" id="slider" >
             <div class="chicago-img">
                 <div>
                     <img width="100%" src="./acset/img/chicago.jpg" alt="">
@@ -47,6 +47,30 @@
                 <div class="chicago-content">
                     <h3 class="content">Chicago</h3>
                     <p class="sub-content"><b>Thank you, Chicago - A night we won't forget.</b></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="mySlides" id="slider" >
+            <div class="chicago-img">
+                <div>
+                    <img width="100%" src="./acset/img/la.jpg" alt="">
+                </div>
+                <div class="chicago-content">
+                    <h3 class="content">Los Angeles</h3>
+                    <p class="sub-content"><b>We had the best time playing at Venice Beach!</b></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="mySlides" id="slider" >
+            <div class="chicago-img">
+                <div>
+                    <img width="100%" src="./acset/img/ny.jpg" alt="">
+                </div>
+                <div class="chicago-content">
+                    <h3 class="content">New York</h3>
+                    <p class="sub-content"><b>The atmosphere in New York is lorem ipsum.</b></p>
                 </div>
             </div>
 
@@ -107,7 +131,7 @@
                             </div>
                             
                         </div>
-                        <div class="ticket-place">
+                        <div class="ticket-place clear">
                             <img width="100%" src="./acset/img/sanfran.jpg" alt="">
                             <div class="content-ticket-buy">
                                 
@@ -121,7 +145,30 @@
                     </div>
                 </div>
             </div>
+            <div class="clear animation" id="buyTicketForm">
+                <div class="">
 
+                    <div class="buyTicketForm__hearder">
+                        <span onclick="document.getElementById('buyTicketForm').style.display='none'" class="buyTicketForm__hearder--span ti-close" >
+    
+                        </span>
+                        <header>
+                            <i class="ti-ticket buyTicketForm__hearder--icon"></i>
+                            <p class="buyTicketForm__hearder--content">Tickets</p>
+                        </header>
+                    </div>
+                    <div class="buyTicketForm__contentbox clear">
+                        <i class="ti-shopping-cart-full buyTicketForm__des">  Tickets, $15 per person</i>
+                        <input class="buyTicketForm__input" type="text" placeholder="  How Many ?">
+                        <i class="ti-user buyTicketForm__des">  Send To</i>
+                        <input class="buyTicketForm__input" type="text"  placeholder="  Enter Name ">
+                        <button class="buyTicketForm__btn">PAY</button>
+                        <button class="buyTicketForm__contentbox--close" onclick="document.getElementById('buyTicketForm').style.display='none'" class="buyTicketForm__hearder--span ti-close">Close</button>                    
+                        <p class="buyTicketForm__contentbox--help">Need <a href="#">Help</a></p>
+    
+                    </div>
+                </div>
+            </div>
             <div class="content-section" id="contact">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
@@ -179,7 +226,24 @@
 
         
     </div>
+    
     <script>
+        // Slide
+        var mySlides = document.getElementsByClassName('mySlides')
+        var slideIndex = 0;
+        slideLoop();
+        function slideLoop(){
+            var mySlides = document.getElementsByClassName('mySlides')
+            for (let i = 0; i < mySlides.length ; i++) {
+               var slide = mySlides[i];
+               slide.style.display = 'none' 
+            }
+            slideIndex++;
+            if(slideIndex>3){slideIndex=0}
+            mySlides[slideIndex].style.display = 'block'
+            setTimeout(slideLoop,4000)
+        }
+        // mobile
         var headerElement = document.getElementById('header');
         var mobileMenuBtn = document.getElementById('mobile-menu-btn');
         var HeaderHigh = headerElement.clientHeight;
@@ -206,6 +270,21 @@
                 }
 
                 
+            }
+        }
+        var buyTickets = document.getElementsByClassName('buy-ticket-button')
+        for(var i =0 ;i<buyTickets.length;i++){
+            var buyTicket = buyTickets[i]
+            buyTicket.onclick = function(){
+                document.getElementById('buyTicketForm').style.display = "block"
+            }
+        }
+        var outSideClose = document.getElementById('buyTicketForm');
+        window.onclick = function(event){
+            console.log(event)
+            if(event.target === outSideClose)
+            {
+                outSideClose.style.display = 'none'
             }
         }
     </script>
