@@ -230,20 +230,20 @@
     
     <script>
         // Slide
-        var mySlides = document.getElementsByClassName('mySlides')
-        var slideIndex = 0;
-        slideLoop();
-        function slideLoop(){
-            var mySlides = document.getElementsByClassName('mySlides')
-            for (let i = 0; i < mySlides.length ; i++) {
-               var slide = mySlides[i];
-               slide.style.display = 'none' 
-            }
-            slideIndex++;
-            if(slideIndex>3){slideIndex=0}
-            mySlides[slideIndex].style.display = 'block'
-            setTimeout(slideLoop,4000)
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
         }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000);    
+        }           
         // mobile
         var headerElement = document.getElementById('header');
         var mobileMenuBtn = document.getElementById('mobile-menu-btn');
